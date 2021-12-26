@@ -1,16 +1,9 @@
 # to_do_list
 
-A new Flutter project.
+A cross-platform **Todo List App** created using `Dart` and `Flutter`.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Acknowledgement
+Special thanks to [Johannes Mike](https://github.com/JohannesMilke) for his amazing youtube tutorial and repository.
+**[Johannes's](https://www.youtube.com/channel/UC0FD2apauvegCcsvqIBceLA) Youtube Tutorials:**
+* [Todo App Tutorial](https://www.youtube.com/watch?v=kN9Yfd4fu04&t=963s)
+* [Firebase integration tutoria](https://www.youtube.com/watch?v=EV2DyrKOqrY&t=273s)
