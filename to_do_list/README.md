@@ -67,7 +67,7 @@ dependencies {
 **'IPHONEOS_DEPLOYMENT_TARGET'** version error
 * ADD to Podfile:
 
-```podfile
+```html
 post_install do |installer|
   installer.pods_project.targets.each do |target|
       flutter_additional_ios_build_settings(target)
