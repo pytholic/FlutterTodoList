@@ -81,6 +81,55 @@ post_install do |installer|
   end
 end
 ```
+
+### MigratMigration to cloud_firestore 2.0.0
+* The migration involves adding a `<Map<String, dynamic>>` in numerous places
+* Do it only if you use newer versions of `firebase_core` and `cloud_firestore`
+
+#### Example
+```html
+- StreamBuilder<DocumentSnapshot>(
++ StreamBuilder<DocumentSnapshot<Map<String, dynamic>>>(
+  stream: FirebaseFirestore.instance.collection('movies').doc('star-wars').snapshots(),
+-  builder: (BuildContext context, AsyncSnapshot<DocumentSnapshot> snapshot) {
++  builder: (BuildContext context, AsyncSnapshot<DocumentSnapshot<Map<String, dynamic>>> snapshot) {
+    // ...
+  }
+)
+```
+
+#### My Case
+* Change tranbsformer in `utils.dart` from
+```dart
+static StreamTransformer<QuerySnapshot, List<T>> transformer<T>(
+      T Function(Map<String, dynamic> json) fromJson) =>
+  StreamTransformer<QuerySnapshot, List<T>>.fromHandlers(
+    handleData: (QuerySnapshot data, EventSink<List<T>> sink) {
+      final snaps = data.docs.map((doc) => doc.data()).toList();
+      final users = snaps.map((json) => fromJson(json)).toList();
+
+      sink.add(users);
+    },
+  );
+```
+
+to
+```dart
+  static StreamTransformer<QuerySnapshot<Map<String, dynamic>>, List<T>>
+      transformer<T>(T Function(Map<String, dynamic> json) fromJson) =>
+          StreamTransformer<QuerySnapshot<Map<String, dynamic>>,
+              List<T>>.fromHandlers(
+            handleData: (QuerySnapshot data, EventSink<List<T>> sink) {
+              final snaps = data.docs.map((doc) => doc.data()).toList();
+              final users = snaps
+                  .map((json) => fromJson(json as Map<String, dynamic>))
+                  .toList();
+
+              sink.add(users);
+            },
+          );
+```
+
 ---
 ## Acknowledgement
 Special thanks to [Johannes Mike](https://github.com/JohannesMilke) for his amazing youtube tutorial and repository.
