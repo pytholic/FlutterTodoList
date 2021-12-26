@@ -33,7 +33,8 @@ flutter run
 ```
 
 ### Unsound safety check
-Some packages give **unsound safety check** issue if you have older versions of `firebase plugins`. Reolve this by addig --no-sound-safety-check argument to your run command.
+Some packages give **unsound safety check** issue if you have older versions of `firebase plugins`. Reolve this by adding \
+--no-sound-safety-check argument to your run command.
 ```
 flutter run --no-sound-safety-check
 ```
