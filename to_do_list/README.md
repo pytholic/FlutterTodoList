@@ -2,6 +2,7 @@
 
 A cross-platform **Todo List App** created using `Dart` and `Flutter`. I followed the tutorials by [Johannes Mike](https://github.com/JohannesMilke) for personal learning. Then started tinkering with the app to customize it and learn more about Flutter.
 
+---
 ## Flutter Setup
 * [Tutorial link](https://www.youtube.com/watch?v=5FEY5-1m1cs&t=899s)
 
@@ -22,7 +23,8 @@ Follow the instructions on [offical website](https://docs.flutter.dev/get-starte
 * [Tutorial link](https://www.youtube.com/watch?v=LKLLcrisa6M&t=839s)
 * [iOS](https://firebase.google.com/docs/ios/setup)
 * [Android](https://firebase.google.com/docs/android/setup)
-
+* 
+---
 ## Resolving Issues
 In case you run into some build issues after copying your project among different devices or after some package updates, try the following steps before anything else.
 Run following command in `root` directory.
