@@ -26,7 +26,7 @@ Follow the instructions on [offical website](https://docs.flutter.dev/get-starte
 ## Resolving Issues
 In case you run into some build issues after copying your project among different devices or after some package updates, try the following steps before anything else.
 Run following command in `root` directory.
-```
+```console
 flutter clean
 flutter pub get
 flutter run
@@ -35,7 +35,7 @@ flutter run
 ### Unsound safety check
 Some packages give **unsound safety check** issue if you have older versions of `firebase plugins`. Reolve this by adding \
 --no-sound-safety-check argument to your run command.
-```
+```console
 flutter run --no-sound-safety-check
 ```
 
@@ -44,7 +44,7 @@ flutter run --no-sound-safety-check
 * If `xcode` doesn't work (in general or in copied project), remove `ios/Podfile` (lockfile and pods as well)
 
 Then run in the `root` project directory.
-```
+```console
 flutter clean
 flutter pub get
 flutter run
@@ -55,7 +55,7 @@ If you see the error `"issue: I/Process ( 5084): Sending signal. PID: 5084 SIG: 
 * Open `android/app/build.gradle`
 * Inside `dependies` list, add `implementation "io.grpc:grpc-okhttp:1.32.2"`
 
-```
+```yaml
 dependencies {
     .
     .
