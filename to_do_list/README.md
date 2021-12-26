@@ -23,6 +23,21 @@ Follow the instructions on [offical website](https://docs.flutter.dev/get-starte
 * [iOS](https://firebase.google.com/docs/ios/setup)
 * [Android](https://firebase.google.com/docs/android/setup)
 
+## Issues
+In case you run into some build issues after copying your project among different devices or after some package updates, try the following steps before anything else.
+Run
+```
+flutter clean
+flutter pub get
+flutter run
+```
+
+### Unsound safety check
+Some packages give **unsound safety check** issue if you have older versions of `firebase plugins`. Reolve this by addig --no-sound-safety-check argument to your run command.
+```
+flutter run --no-sound-safety-check
+```
+
 ## Acknowledgement
 Special thanks to [Johannes Mike](https://github.com/JohannesMilke) for his amazing youtube tutorial and repository.
 ### [Johannes's](https://www.youtube.com/channel/UC0FD2apauvegCcsvqIBceLA) Youtube Tutorials:
