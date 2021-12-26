@@ -25,6 +25,11 @@ Follow the instructions on [offical website](https://docs.flutter.dev/get-starte
 * [Android](https://firebase.google.com/docs/android/setup)
 * 
 ---
+## App functionality
+* Add, Edit and Delete tasks
+* Colorful widgets
+* Local plus cloud storage using `firebase`
+
 ## Resolving Issues
 In case you run into some build issues after copying your project among different devices or after some package updates, try the following steps before anything else.
 Run following command in `root` directory.
