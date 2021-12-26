@@ -1,6 +1,6 @@
 # to_do_list
 
-A cross-platform **Todo List App** created using `Dart` and `Flutter`.
+A cross-platform **Todo List App** created using `Dart` and `Flutter`. I followed the tutorials by [Johannes Mike](https://github.com/JohannesMilke) for personal learnign and then started tinkering with the app to customize my app and learn more about Flutter.
 
 ## Flutter Setup
 * [Tutorial link](https://www.youtube.com/watch?v=5FEY5-1m1cs&t=899s)
