@@ -12,7 +12,11 @@ Follow the instructions on [offical website](https://docs.flutter.dev/get-starte
 * Download the latest stable release of the **Flutter SDK**
 * Extract the zip file and place the contained flutter in the desired installation location for the Flutter SDK.
 *   **Warning:** Do not install Flutter in a directory like `C:\Program Files\` that requires elevated privileges.
-* Add `flutter\bin` to your **PATH** environment variable
+* Add `flutter\bin` to your `PATH` environment variable
+* Download and install **Android Studio** and **VS Code**
+* Install ``Android SDK Tools`` and ``Google usb driver`` from Android Studo's **SDK Mnagaer**
+* Install `FLutter` and `Dart` extensions in VS Code.
+* Setup an emulator in `AVD Manager` inside Android Studio to run your apps in a virtual device. Alternatively, you can also use a real device.
 
 ## Firebase Setup
 * [Tutorial link](https://www.youtube.com/watch?v=LKLLcrisa6M&t=839s)
