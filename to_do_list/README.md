@@ -23,9 +23,9 @@ Follow the instructions on [offical website](https://docs.flutter.dev/get-starte
 * [iOS](https://firebase.google.com/docs/ios/setup)
 * [Android](https://firebase.google.com/docs/android/setup)
 
-## Issues
+## Resolving Issues
 In case you run into some build issues after copying your project among different devices or after some package updates, try the following steps before anything else.
-Run
+Run following command in `root` directory.
 ```
 flutter clean
 flutter pub get
@@ -39,8 +39,35 @@ Some packages give **unsound safety check** issue if you have older versions of 
 flutter run --no-sound-safety-check
 ```
 
+### Running on iOS
+* iOS run needs `Podile`. It will be generated automatically after Flutter run.
+* If `xcode` doesn't work (in general or in copied project), remove `ios/Podfile` (lockfile and pods as well)
+
+Then run in the `root` project directory.
+```
+flutter clean
+flutter pub get
+flutter run
+```
+
+### IO.GRPC Error
+If you see the error `"issue: I/Process ( 5084): Sending signal. PID: 5084 SIG: 9"`, then do the following to resolve it.
+* Open `android/app/build.gradle`
+* Inside `dependies` list, add `implementation "io.grpc:grpc-okhttp:1.32.2"`
+
+```
+dependencies {
+    .
+    .
+    implementation "io.grpc:grpc-okhttp:1.32.2"
+}
+```
+
+
 ## Acknowledgement
 Special thanks to [Johannes Mike](https://github.com/JohannesMilke) for his amazing youtube tutorial and repository.
+
+
 ### [Johannes's](https://www.youtube.com/channel/UC0FD2apauvegCcsvqIBceLA) Youtube Tutorials:
 * [Todo App Tutorial](https://www.youtube.com/watch?v=kN9Yfd4fu04&t=963s)
 * [Firebase integration tutoria](https://www.youtube.com/watch?v=EV2DyrKOqrY&t=273s)
