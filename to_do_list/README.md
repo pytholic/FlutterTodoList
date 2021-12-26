@@ -79,7 +79,7 @@ post_install do |installer|
   end
 end
 ```
-
+---
 ## Acknowledgement
 Special thanks to [Johannes Mike](https://github.com/JohannesMilke) for his amazing youtube tutorial and repository.
 
