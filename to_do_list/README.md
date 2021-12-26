@@ -1,4 +1,4 @@
-# to_do_list
+# Todo List App
 
 A cross-platform **Todo List App** created using `Dart` and `Flutter`. I followed the tutorials by [Johannes Mike](https://github.com/JohannesMilke) for personal learning. Then started tinkering with the app to customize it and learn more about Flutter.
 
