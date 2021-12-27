@@ -20,6 +20,43 @@ Follow the instructions on [offical website](https://docs.flutter.dev/get-starte
 * Setup an emulator in `AVD Manager` inside Android Studio to run your apps in a virtual device. Alternatively, you can also use a real device.
 
 ## Firebase Setup
+### Steps for android
+* Create a new `project` on you firebase account
+* Then create an android app
+* Find `package name` at `android/app/main/src/build.gradle` and look for `applicationID`
+* Register the app
+* Add the Firebase Android configuration file to your app:
+*   Click Download `google-services.json` to obtain your Firebase Android config file.
+*   Move your config file into the module (app-level) directory of your app. 
+* In your root-level (`project-level`) Gradle file (`build.gradle`), add rules to include the Google Services Gradle plugin. Check that you have Google's Maven repository, as well.
+```
+dependencies {
+    // ...
+
+    // Add the following line:
+    classpath 'com.google.gms:google-services:4.3.10'  // Google Services plugin
+  }
+}
+```
+* In your module (`app-level`) Gradle file (usually `app/build.gradle`), apply the Google Services Gradle plugin:
+```
+apply plugin: 'com.android.application'
+// Add the following line:
+apply plugin: 'com.google.gms.google-services'  // Google Services plugin
+
+android {
+  // ...
+}
+```
+* Declare the dependencies for the **Firebase** products that you want to use in your app. Declare them in your module (`app-level`) Gradle file (usually `app/build.gradle`).
+```
+dependencies {
+  // ...
+  // Declare the dependency for the Firebase SDK for Google Analytics
+  implementation 'com.google.firebase:firebase-analytics'
+}
+```
+
 * [Tutorial link](https://www.youtube.com/watch?v=LKLLcrisa6M&t=839s)
 * [iOS](https://firebase.google.com/docs/ios/setup)
 * [Android](https://firebase.google.com/docs/android/setup)
