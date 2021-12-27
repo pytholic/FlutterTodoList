@@ -135,6 +135,12 @@ to
           );
 ```
 
+### Debug mode issue on <= iOS 14
+While debugging/running on devices with `iOS 14` or less, the app stopped working as soon as the program is terminated in the IDE. To resolve it, add `--release` to your flutter run command.
+```console
+flutter run --release --no-sound-null-safety
+```
+
 ---
 ## Acknowledgement
 Special thanks to [Johannes Mike](https://github.com/JohannesMilke) for his amazing youtube tutorial and repository.
