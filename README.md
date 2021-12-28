@@ -48,12 +48,25 @@ android {
   // ...
 }
 ```
-* Declare the dependencies for the **Firebase** products that you want to use in your app. Declare them in your module (`app-level`) Gradle file (usually `app/build.gradle`).
+* Enable `multidex` in the same file
+```
+    defaultConfig {
+        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
+        applicationId "com.example.shopping_list"
+        minSdkVersion flutter.minSdkVersion
+        targetSdkVersion flutter.targetSdkVersion
+        multiDexEnabled true
+        versionCode flutterVersionCode.toInteger()
+        versionName flutterVersionName
+    }
+```
+* Declare the dependencies for the **Firebase** products that you want to use in your app. Declare them in your module (`app-level`) Gradle file (usually `app/build.gradle`). Also add `multidex`.
 ```
 dependencies {
   // ...
   // Declare the dependency for the Firebase SDK for Google Analytics
   implementation 'com.google.firebase:firebase-analytics'
+  implementation "com.android.support:multidex:1.0.3"
 }
 ```
 * Click **Next**
