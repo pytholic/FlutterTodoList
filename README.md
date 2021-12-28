@@ -120,7 +120,7 @@ flutter run
 ### IO.GRPC Error
 If you see the error `"issue: I/Process ( 5084): Sending signal. PID: 5084 SIG: 9"`, then do the following to resolve it.
 * Open `android/app/build.gradle`
-* Inside `dependies` list, add `implementation "io.grpc:grpc-okhttp:1.32.2"`
+* Inside `dependencies` list, add `implementation "io.grpc:grpc-okhttp:1.32.2"`
 
 ```yaml
 dependencies {
