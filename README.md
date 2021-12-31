@@ -107,7 +107,7 @@ flutter run --no-sound-safety-check
 ```
 
 ### Running on iOS
-* iOS run needs `Podile`. It will be generated automatically after Flutter run.
+* iOS run needs `Podile`. It will be generated automatically after `flutter pub get` or `flutter run`.
 * If `xcode` doesn't work (in general or in copied project), remove `ios/Podfile` (lockfile and pods as well)
 
 Then run in the `root` project directory.
